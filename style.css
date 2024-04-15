@@ -1,11 +1,45 @@
-/***********************Import des fonts**********************/
+/***********************Import des webfonts**********************/
+
+/*  */
+@font-face {
+    font-family: 'fa-brands-400';
+    src: url(ressources/font-awesome/webfonts/fa-brands-400.ttf) format('truetype');
+}
+
+@font-face {
+    font-family: 'fa-regular-400';
+    src: url(ressources/font-awesome/webfonts/fa-regular-400.ttf) format('truetype');
+}
+
+@font-face {
+    font-family: 'fa-solid-900';
+    src: url(ressources/font-awesome/webfonts/fa-solid-900.ttf) format('truetype');
+}
+
+/* Polices:
+- “Arvo” 700 (Google Fonts) ok
+- “Source Sans Pro” 300, 400, 600 (Google Fonts)
+- “FontAwesome” (CSS et polices fournies dans les ressources)ok */
 
 
 
+/* Couleur */
 
 
-
-
+/* Arrondis: 4px
+Couleurs:
+- Fond clair: #FFFFFF
+- Fond gris: #F0F0F0
+- Fond sombre: #444444
+- Orange: #ED786A
+- Orange:hover: #FD887A
+- Rouge: #CC0000
+- Gris léger: #E5E5E5
+- Blanc: #FFFFFF
+- Gris clair: #888888
+- Gris moyen: #777777
+- Gris: #666666
+- Gris sombre: #3C3C3C */
 
 
 
@@ -19,21 +53,30 @@
     box-sizing: border-box;
 }
 
+ol,
+ul {
+    /* Suppression des puces de toutes les listes */
+    list-style: none;
+}
 
+a {
+    /* on reprend la couleur transmise par héritage */
+    color: inherit;
+    /* on enlève le soulignement */
+    text-decoration: none;
+}
 
-
-
-
-
-
-
-
+button {
+    background-color: transparent;
+    border: 0;
+    /* on enlève les coins arrondis */
+    border-radius: 0;
+    font-family: inherit;
+    font-size: inherit;
+}
 /************************Partie MOBILE***************0 à 767px*/
 
-
-
-
-
+h1{font-family:sans-serif ;}
 
 
 
