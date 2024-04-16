@@ -19,7 +19,7 @@
 /* Polices:
 - “Arvo” 700 (Google Fonts) ok
 - “Source Sans Pro” 300, 400, 600 (Google Fonts)
-- “FontAwesome” (CSS et polices fournies dans les ressources)ok */
+- “FontAwesome” (CSS et polices fournies dans les ressources) ok */
 
 
 
@@ -47,58 +47,104 @@ Couleurs:
 
 /*************************Reset CSS************************/
 
-* {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
+/* ----- Styles généraux ----- */
+:root {
+    --side-bar-size: 300px;
 }
 
-ol,
-ul {
-    /* Suppression des puces de toutes les listes */
-    list-style: none;
+body {
+    font-family: sans-serif;
+    overflow-x: hidden;
+    position: relative;
+}
+
+
+/* ----- Styles outils ----- */
+
+
+/* ----- Page ----- */
+#panels {
+    display: flex;
+    left: calc(-1 * var(--side-bar-size));
+    position: relative;
+    transition: left .3s ease-in-out;
+    width: calc(100% + var(--side-bar-size));
+}
+
+#panels.opened {
+    left: 0;
+}
+
+.side-panel {
+    background-color: #444;
+    flex: 0 0 var(--side-bar-size);
+    padding: 15px;
+}
+
+.content-panel {
+    flex-grow: 1;
+    padding: 15px;
+    position: relative;
+    height: 100vh;
+}
+
+header {
+    color: #fff;
+    left: calc(-1 * var(--side-bar-size));
+    padding: 0px;
+    position: absolute;
+    top: 0;
+    width: var(--side-bar-size);
+}
+
+#cmd-menu {
+    background-color: #bbb;
+    border: 1px solid #999;
+    border-radius: 4px;
+    color: #333;
+    cursor: pointer;
+    display: block;
+    height: 60px;
+    padding: 15px;
+    position: absolute;
+    right: -75px;
+    top: 15px;
+    width: 60px;
+}
+
+.title-bar {
+    padding: 100px 15px;
+    text-align: center;
 }
 
 a {
-    /* on reprend la couleur transmise par héritage */
-    color: inherit;
-    /* on enlève le soulignement */
-    text-decoration: none;
+    padding: 12px;
 }
 
-button {
-    background-color: transparent;
-    border: 0;
-    /* on enlève les coins arrondis */
-    border-radius: 0;
-    font-family: inherit;
-    font-size: inherit;
+.etage1 {
+    color: #FFFFFF;
+    font-family: 'Source Sans 3';
+    font-weight: 700;
+    padding-bottom: 0;
+    border: #333 solid 1px;
 }
-/************************Partie MOBILE***************0 à 767px*/
 
-h1{font-family:sans-serif ;}
-
-
-
-
-
-
-
-/************************Partie TABLET***************767 à 991px*/
-
-@media screen and (min-width : 767px){
-
-
-
-
+.etage2 {
+    color: #FFFFFF;
+    font-family: 'Source Sans 3';
+    font-weight: 400;
+    padding-bottom: 0;
+    border: #333 solid 1px;
 }
-/************************Partie Ordi***************991px et plus*/
-
-@media screen and (min-width : 991px){
 
 
 
+/* ----- Media queries ----- */
+/* ---- A partir de 768px (Tablette portrait / Phablet paysage et plus grand ) ---- */
+@media (min-width: 768px) {}
 
+/* ---- Entre 768px et 991px (uniquement Tablette portrait / Phablet paysage ) ---- */
+@media (min-width: 768px) and (max-width: 991px) {}
 
-
-}
+/* ---- A partir de 992px (Desktop / Tablette paysage et plus grand) ---- */
+@media (min-width: 992px) {}
