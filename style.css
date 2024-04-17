@@ -35,7 +35,7 @@ Couleurs:
 - Orange:hover: #FD887A
 - Rouge: #CC0000
 - Gris léger: #E5E5E5
-- Blanc: #FFFFFF
+- Blanc: c
 - Gris clair: #888888
 - Gris moyen: #777777
 - Gris: #666666
@@ -68,7 +68,7 @@ body {
     left: calc(-1 * var(--side-bar-size));
     position: relative;
     transition: left .3s ease-in-out;
-    width: calc(100% + var(--side-bar-size));
+    width: 100%;
 }
 
 #panels.opened {
@@ -83,9 +83,9 @@ body {
 
 .content-panel {
     flex-grow: 1;
-    padding: 15px;
     position: relative;
     height: 100vh;
+    width: 100%;
 }
 
 header {
@@ -98,50 +98,242 @@ header {
 }
 
 #cmd-menu {
-    background-color: #bbb;
-    border: 1px solid #999;
+    background-color: #E5E5E5;
+    box-shadow: 2px 2px #d4d3d3;
     border-radius: 4px;
-    color: #333;
+    color: #888888;
     cursor: pointer;
     display: block;
-    height: 60px;
+    height: 50px;
     padding: 15px;
     position: absolute;
-    right: -75px;
-    top: 15px;
-    width: 60px;
+    right: -80px;
+    top: 5px;
+    width: 75px;
 }
 
 .title-bar {
-    padding: 100px 15px;
+    padding: 50px 15px 35px;
     text-align: center;
 }
 
-a {
-    padding: 12px;
-}
+/* ***********Style nav mobile ******** */
+/* todo: barre + espacement */
 
 .etage1 {
     color: #FFFFFF;
     font-family: 'Source Sans 3';
     font-weight: 700;
-    padding-bottom: 0;
-    border: #333 solid 1px;
+    padding: 10px;
+    /* border-bottom: #3C3C3C solid 1px; */
 }
 
 .etage2 {
     color: #FFFFFF;
     font-family: 'Source Sans 3';
     font-weight: 400;
+    display: block;
+    padding: 10px;
+    /* border-bottom: #3C3C3C solid 1px; */
+}
+
+li.noborder {
     padding-bottom: 0;
-    border: #333 solid 1px;
+    /* border-bottom: #3C3C3C solid 1px;; */
+}
+
+.noborder {
+    color: #FFFFFF;
+    font-family: 'Source Sans 3';
+    font-weight: 700;
+    padding: 10px;
+}
+
+.finlist {
+    color: #FFFFFF;
+    font-family: 'Source Sans 3';
+    font-weight: 700;
+    padding: 10px;
+}
+
+/* -------------------- */
+
+/* ?---------Titre principal---------- */
+
+h1 {
+    font-family: Arvo;
+    letter-spacing: 10px;
+    color: #ED786A;
+    text-shadow: 2px 2px #d4d3d3;
+    margin: 30px;
+}
+
+#texttitle {
+    font-family: 'Source Sans 3';
+    color: #888888;
+    letter-spacing: 2px;
+}
+
+/* ?-------------Section book----------------------- */
+
+.sectionbook::before {
+    content: "";
+    left: 50px;
+    height: 15px;
+    border-top: 2px solid #d4d3d3;
+    border-bottom: 2px solid #d4d3d3;
+    display: block;
+    margin-bottom: 40px;
+}
+
+.sectionlivre {
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    margin-right :40px;
+    margin-left: 40px;
+}
+
+h2 {
+    font-family: 'Source Sans 3';
+    font-weight: 300;
+    text-align: center;
+    margin-bottom: 20px;
+    letter-spacing: 2px;
+}
+
+.boldtitle {
+    font-family: 'Source Sans 3';
+    font-weight: 400;
+}
+.bookimg{
+    border: #d4d3d3 solid 8px;
+    margin-bottom: 30px;
+}
+
+/*?-------------Section petit dej-------------------- */
+
+h3{
+    text-align: center;
+    font-family: 'Source Sans 3';
+    font-weight: 600;
+    color: #777777;
+    font-size: 24px;
+    margin-bottom: 30px;
+    letter-spacing: 2px;
+}
+p{
+    text-align: center;
+    font-family: 'Source Sans 3';
+    font-weight: 300;
+    font-size: 18px;
+    line-height: 28px;
+}
+.boldtext{
+    font-weight: 500;
+}
+
+a.atext{
+    text-underline-offset: 4px ;
+    text-decoration: underline #d4d3d3 ;
+}
+
+.dejimg{
+    border: #d4d3d3 solid 8px;
+    margin-top: 30px;
+    margin-bottom: 30px;
+}
+.sectiondej , .sectionalien , .CIA{
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    margin-right :40px;
+    margin-left: 40px;
+}
+.fleurimg{
+    border: #d4d3d3 solid 8px;
+    margin-top: 30px;
+    margin-bottom: 30px;
+}
+
+/* ?------------Personnalisation bouton------------------ */
+
+.boutonOrange{
+    background-color: #ED786A;
+    height: 50px;
+    font-size: 14px;
+    letter-spacing: 1px;
+    font-weight: 700;
+    color: white;
+    border-radius: 5px;
+    cursor: pointer;
+    margin-top: 40px;
+    margin-bottom: 100px;
+
+}
+.encorePlus::after{
+    color: #444;
+}
+.fa-file{
+    opacity: 0.5;
+}
+
+/*?---------Section banner--------------------------------*/
+
+.citation{
+    display: flex;
+    justify-content: center;
+    align-items:center;
+    flex-direction: column;
+    margin-top: 20px;
+}
+.imgCitation{
+    height: 300px;
+}
+.textCitation{
+    position: absolute;
+    color: #FFFFFF;
+    font-family: 'Source Sans 3';
+    font-weight: 500;
+    margin-left: 20px;
+    margin-right: 20px;
+    letter-spacing: 3px;
+    font-size: 20px;
+}
+
+#boldCitation{
+    font-weight: 700;
+}
+/* todo: faire les deux lignes une au dessus de l'image et l'autre en dessous */
+/* .citation::before{
+    content: "";
+    display: block;
+    border-bottom: 5px solid #444;
+    height: 10px;
+} */ 
+
+
+/* section cia */
+
+
+.CIA{
+    margin-top: 60px;
+}
+.ciaImg{border: #d4d3d3 solid 8px;
+margin-bottom: 30px;
+}
+.CIA p{
+    text-align: justify;
 }
 
 
 
+
+
+
+
+
 /* ----- Media queries ----- */
-/* ---- A partir de 768px (Tablette portrait / Phablet paysage et plus grand ) ---- */
-@media (min-width: 768px) {}
 
 /* ---- Entre 768px et 991px (uniquement Tablette portrait / Phablet paysage ) ---- */
 @media (min-width: 768px) and (max-width: 991px) {}
