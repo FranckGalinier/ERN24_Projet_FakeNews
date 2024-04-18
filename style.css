@@ -16,6 +16,8 @@
     src: url(ressources/font-awesome/webfonts/fa-solid-900.ttf) format('truetype');
 }
 
+/* ? Notes du pdf cahiers des charges */
+
 /* Polices:
 - “Arvo” 700 (Google Fonts) ok
 - “Source Sans Pro” 300, 400, 600 (Google Fonts)
@@ -24,8 +26,6 @@
 
 
 /* Couleur */
-
-
 /* Arrondis: 4px
 Couleurs:
 - Fond clair: #FFFFFF
@@ -35,17 +35,11 @@ Couleurs:
 - Orange:hover: #FD887A
 - Rouge: #CC0000
 - Gris léger: #E5E5E5
-- Blanc: c
 - Gris clair: #888888
 - Gris moyen: #777777
 - Gris: #666666
 - Gris sombre: #3C3C3C */
 
-
-
-
-
-/*************************Reset CSS************************/
 
 /* ----- Styles généraux ----- */
 :root {
@@ -97,65 +91,57 @@ header {
     width: var(--side-bar-size);
 }
 
+/* ? Bouton burger pour accéder à la navigation */
+
 #cmd-menu {
     background-color: #E5E5E5;
     box-shadow: 2px 2px #d4d3d3;
     border-radius: 4px;
     color: #888888;
     cursor: pointer;
-    display: block;
-    height: 50px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 25px;
     padding: 15px;
     position: absolute;
-    right: -80px;
+    right: -55px;
     top: 5px;
-    width: 75px;
-}
-
-.title-bar {
-    padding: 50px 15px 35px;
-    text-align: center;
+    width: 50px;
+    
 }
 
 /* ***********Style nav mobile ******** */
-/* todo: barre + espacement */
+
 
 .etage1 {
     color: #FFFFFF;
     font-family: 'Source Sans 3';
-    font-weight: 700;
-    /* border-bottom: #3C3C3C solid 1px; */
+    letter-spacing: 1px;
 }
 
 .etage2 {
     color: #FFFFFF;
     font-family: 'Source Sans 3';
-    font-weight: 400;
+    font-weight: 300;
     display: block;
-    /* border-bottom: #3C3C3C solid 1px; */
 }
-
-
-.noborder {
-    color: #FFFFFF;
-    font-family: 'Source Sans 3';
-    font-weight: 700;
-
+.etage3{
+    font-weight: 300;
 }
-
-.finlist {
-    color: #FFFFFF;
-    font-family: 'Source Sans 3';
-    font-weight: 700;
-
+a.etage2{
+    padding-left: 20px;
 }
-
+a.etage3{
+    padding-left: 30px;
+}
 li>a {
     display: block;
     padding: 10px;
-    border-top: 2px solid white;
-    font-weight: 700;
+    border-top: 1px solid #3C3C3C;
+    font-weight: 500;
     color: white;
+    font-size: 11px;
 }
 
 nav>ul>li:first-child>a {
@@ -164,7 +150,14 @@ nav>ul>li:first-child>a {
 
 /* -------------------- */
 
-/* ?---------Titre principal---------- */
+
+/* ? Titre Fake News + petit paragraphe */
+
+/* Titre */
+.title-bar {
+    padding: 50px 15px 35px;
+    text-align: center;
+}
 
 h1 {
     font-family: Arvo;
@@ -174,31 +167,24 @@ h1 {
     margin: 30px;
 
 }
-
+/* Petit paragraphe */
 #texttitle {
     font-family: 'Source Sans 3';
     color: #888888;
     letter-spacing: 2px;
 }
 
-/* ?-------------Section book----------------------- */
+
+/* ?-------------Section book--------------- */
 
 .sectionbook::before {
     content: "";
     left: 50px;
-    height: 15px;
+    height: 10px;
     border-top: 2px solid #d4d3d3;
     border-bottom: 2px solid #d4d3d3;
     display: block;
     margin-bottom: 40px;
-}
-
-.sectionlivre {
-    display: flex;
-    justify-content: center;
-    flex-direction: column;
-    margin-right: 40px;
-    margin-left: 40px;
 }
 
 h2 {
@@ -241,13 +227,21 @@ p {
     word-spacing: 3px;
 }
 
+/* ? Classe permettant la mise en gras 500 dans les textes */
 .boldtext {
     font-weight: 500;
 }
 
+/* ? Stylisation des liens dans les textes */
 a.atext {
     text-underline-offset: 4px;
     text-decoration: underline #d4d3d3;
+}
+
+/* ? Stylisation des même liens quand on passe la souris dessus */
+a.atext:hover{
+    color:#FD887A;
+    text-decoration: none;
 }
 
 .dejimg {
@@ -256,6 +250,8 @@ a.atext {
     margin-bottom: 30px;
 }
 
+.sectionbook,
+.sectionlivre,
 .sectiondej,
 .sectionalien,
 .CIA,
@@ -294,7 +290,9 @@ a.atext {
     box-shadow: 2px 2px #d4d3d3;
 
 }
-
+.boutonOrange:hover{
+    background-color:#FD887A ;
+}
 .encorePlus::after {
     color: #444;
 }
@@ -303,7 +301,6 @@ a.atext {
 .fa-envelope {
     opacity: 0.5;
 }
-
 /*?---------Section banner--------------------------------*/
 
 .citation {
@@ -315,7 +312,11 @@ a.atext {
 }
 
 .imgCitation {
-    height: 300px;
+    height: 250px;
+    border-top: 2px solid #d4d3d3;
+    border-bottom: 2px solid #d4d3d3;
+    padding-bottom: 10px;
+    padding-top: 10px;
 }
 
 .textCitation {
@@ -364,7 +365,7 @@ a.atext {
 .CIA::after {
     content: "";
     display: block;
-    height: 15px;
+    height: 10px;
     border-top: 2px solid #d4d3d3;
     border-bottom: 2px solid #d4d3d3;
 }
@@ -405,17 +406,41 @@ a.atext {
 .dernièreInfo>p::after {
     content: "";
     display: block;
-    height: 15px;
+    height: 40px;
     border-top: 2px solid #d4d3d3;
     margin-top: 30px;
+    margin-bottom: 0;
 }
 
+.lastchildactu::after{
+    content: "";
+    display: block;
+    height: 10px;
+    border-top: 2px solid #d4d3d3;
+    border-bottom:2px solid #d4d3d3;
+    margin-top: 30px;
+    margin-bottom: 0;
+}
 .imagecotegauche {
     border: #d4d3d3 solid 8px;
     height: 100px;
     margin-right: 15px;
 }
 
+.infosPratiques h3{
+    margin-top: 30px;
+}
+
+h3.h3vampire{
+    margin-top: 0;
+}
+.h3vampire::before{
+
+    content: "";
+    display: block;
+    padding-top: 30px;
+    border-top: 2px solid #d4d3d3;
+}
 .offreGeo {
     display: flex;
 }
@@ -424,7 +449,9 @@ a.atext {
     text-align: justify;
 }
 
-/* -----------FOOTER------------ */
+
+/*? -----------FOOTER---------------------- */
+
 
 footer {
     background-color: #F0F0F0;
@@ -470,7 +497,7 @@ textarea {
 
 form .boutonOrange {
     width: 100%;
-    margin-top: 5px;
+    margin-top: 10px;
     margin-bottom: 30px;
 }
 
@@ -489,6 +516,9 @@ form .boutonOrange {
     justify-content: center;
     align-items: center;
     color: #E5E5E5;
+}
+.rondContact>i{
+    opacity: 1;
 }
 
 #centercontact {
@@ -509,10 +539,6 @@ form .boutonOrange {
     display: flex;
     align-items: center;
 }
-.fa-file,
-.fa-envelope {
-    opacity: 1;
-}
 
 .sectioncontact::after{
     content:"";
@@ -523,9 +549,7 @@ form .boutonOrange {
 
 .endSection p{
     margin-top:50px;
-}
-body{
-    margin-bottom: 20px;
+    padding-bottom: 20px;
 }
 /* ----- Media queries ----- */
 
