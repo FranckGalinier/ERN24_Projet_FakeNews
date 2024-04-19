@@ -43,20 +43,21 @@ Couleurs:
 
 /* ----- Styles généraux ----- */
 :root {
-    --side-bar-size: 300px;
+    --side-bar-size: 250px;
 }
 
 body {
     font-family: sans-serif;
     overflow-x: hidden;
     position: relative;
+    height: 100%;
 }
 
 
 /* ----- Styles outils ----- */
 
 
-/* ----- Page ----- */
+/* ----- Panneau pour décalage de la nav----- */
 #panels {
     display: flex;
     left: calc(-1 * var(--side-bar-size));
@@ -108,7 +109,7 @@ header {
     right: -55px;
     top: 5px;
     width: 50px;
-    
+
 }
 
 /* ***********Style nav mobile ******** */
@@ -126,15 +127,19 @@ header {
     font-weight: 300;
     display: block;
 }
-.etage3{
+
+.etage3 {
     font-weight: 300;
 }
-a.etage2{
+
+a.etage2 {
     padding-left: 20px;
 }
-a.etage3{
+
+a.etage3 {
     padding-left: 30px;
 }
+
 li>a {
     display: block;
     padding: 10px;
@@ -148,17 +153,15 @@ nav>ul>li:first-child>a {
     border-top: none;
 }
 
-/* -------------------- */
-
+/* **************Body principal************ */
 
 /* ? Titre Fake News + petit paragraphe */
-
-/* Titre */
 .title-bar {
     padding: 50px 15px 35px;
     text-align: center;
 }
 
+/* Titre principal */
 h1 {
     font-family: Arvo;
     letter-spacing: 10px;
@@ -167,16 +170,18 @@ h1 {
     margin: 30px;
 
 }
+
 /* Petit paragraphe */
 #texttitle {
     font-family: 'Source Sans 3';
-    color: #888888;
+    color: #777777;
     letter-spacing: 2px;
 }
 
 
 /* ?-------------Section book--------------- */
 
+/* Représente les deux lignes au dessus de la section */
 .sectionbook::before {
     content: "";
     left: 50px;
@@ -187,6 +192,7 @@ h1 {
     margin-bottom: 40px;
 }
 
+/* Sous titre h2 de la section book */
 h2 {
     font-family: 'Source Sans 3';
     font-weight: 300;
@@ -196,13 +202,16 @@ h2 {
     font-size: 15px;
 }
 
+/* Stylisation de la partie en gras du titre h2 */
 .boldtitle {
     font-family: 'Source Sans 3';
     font-weight: 400;
 }
 
+/* Image des livres rangées */
 .bookimg {
     border: #d4d3d3 solid 8px;
+    margin-top: 30px;
     margin-bottom: 30px;
 }
 
@@ -239,8 +248,8 @@ a.atext {
 }
 
 /* ? Stylisation des même liens quand on passe la souris dessus */
-a.atext:hover{
-    color:#FD887A;
+a.atext:hover {
+    color: #FD887A;
     text-decoration: none;
 }
 
@@ -290,17 +299,16 @@ a.atext:hover{
     box-shadow: 2px 2px #d4d3d3;
 
 }
-.boutonOrange:hover{
-    background-color:#FD887A ;
-}
-.encorePlus::after {
-    color: #444;
+
+.boutonOrange:hover {
+    background-color: #FD887A;
 }
 
 .fa-file,
 .fa-envelope {
     opacity: 0.5;
 }
+
 /*?---------Section banner--------------------------------*/
 
 .citation {
@@ -317,6 +325,8 @@ a.atext:hover{
     border-bottom: 2px solid #d4d3d3;
     padding-bottom: 10px;
     padding-top: 10px;
+    width: 100%;
+    object-fit: cover;
 }
 
 .textCitation {
@@ -333,15 +343,6 @@ a.atext:hover{
 #boldCitation {
     font-weight: 700;
 }
-
-/* todo: faire les deux lignes une au dessus de l'image et l'autre en dessous */
-/* .citation::before{
-    content: "";
-    display: block;
-    border-bottom: 5px solid #444;
-    height: 10px;
-} */
-
 
 /* section cia */
 
@@ -394,7 +395,13 @@ a.atext:hover{
     font-size: 11px;
     font-weight: 500;
     letter-spacing: 2px;
-    font-weight: 500;
+}
+
+.divpostdate {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
 }
 
 
@@ -403,7 +410,7 @@ a.atext:hover{
     text-align: justify;
 }
 
-.dernièreInfo>p::after {
+.divpostdate>p::after {
     content: "";
     display: block;
     height: 40px;
@@ -412,35 +419,53 @@ a.atext:hover{
     margin-bottom: 0;
 }
 
-.lastchildactu::after{
+.lastchildactu::after {
     content: "";
     display: block;
     height: 10px;
     border-top: 2px solid #d4d3d3;
-    border-bottom:2px solid #d4d3d3;
+    border-bottom: 2px solid #d4d3d3;
     margin-top: 30px;
     margin-bottom: 0;
 }
+
+.lastchildactu {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    width: 100%;
+}
+
+.lastchildactu p {
+    text-align: center;
+}
+
+
+
+/*  */
 .imagecotegauche {
     border: #d4d3d3 solid 8px;
     height: 100px;
     margin-right: 15px;
 }
 
-.infosPratiques h3{
+.infosPratiques h3 {
     margin-top: 30px;
 }
 
-h3.h3vampire{
+h3.h3vampire {
     margin-top: 0;
 }
-.h3vampire::before{
+
+.h3vampire::before {
 
     content: "";
     display: block;
     padding-top: 30px;
     border-top: 2px solid #d4d3d3;
 }
+
 .offreGeo {
     display: flex;
 }
@@ -461,6 +486,10 @@ footer::before {
     content: "";
     border-top: 2px solid #d4d3d3;
     display: block;
+}
+
+.footertitle {
+    margin-top: 30px;
 }
 
 .sectionform {
@@ -514,47 +543,241 @@ form .boutonOrange {
     text-align: center;
     display: flex;
     justify-content: center;
-    align-items: center;
+    align-items:center;
     color: #E5E5E5;
 }
-.rondContact>i{
+
+.rondContact>i {
     opacity: 1;
 }
 
-#centercontact {
-    display: flex;
-    flex-direction: column
-}
-
-#centercontact>div {
-    display: flex;
-    flex-direction: row;
-    text-align: center;
-    vertical-align: middle;
-    margin-top: 20px;
-}
-
-#centercontact div p {
+.contactlefttablet div p,
+.contactrighttablet div p {
     margin-left: 20px;
     display: flex;
-    align-items: center;
+    align-items:center
+
 }
 
-.sectioncontact::after{
-    content:"";
+.sectioncontact::after {
+    content: "";
     display: block;
     border-bottom: 2px solid #d4d3d3;
     margin-top: 75px;
 }
 
-.endSection p{
-    margin-top:50px;
-    padding-bottom: 20px;
+.contactrighttablet div,
+.contactlefttablet div {
+    display: flex;
+    flex-direction: row;
+    text-align: center;
+    vertical-align: center;
+    margin-top: 20px;
 }
+
+.endSection p {
+    margin-top: 50px;
+    padding-bottom: 24px;
+}
+
+
 /* ----- Media queries ----- */
 
 /* ---- Entre 768px et 991px (uniquement Tablette portrait / Phablet paysage ) ---- */
-@media (min-width: 768px) and (max-width: 991px) {}
+@media (min-width: 768px) {
+    .content-panel {
+        width: 100%;
+    }
+
+    h1 {
+        font-size: 40px;
+    }
+
+    .texttitle {
+        font-size: 32px;
+    }
+
+    h2 {
+        font-size: 28px;
+    }
+
+    .sectionbook {
+        display: flex;
+        flex-wrap: nowrap;
+        flex-direction: row;
+        justify-content: center;
+        flex-grow: 1;
+        margin-left: 30px;
+        margin-right: 30px;
+        width: 100%;
+    }
+
+    .sectionlivre,
+    .sectiondej,
+    .sectionalien {
+        flex-grow: 1;
+        width: 100%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .dejimg,
+    .bookimg,
+    .fleurimg {
+        width: 180px;
+        object-fit: cover;
+    }
+
+
+    /*div citation */
+
+    .imgCitation {
+        height: 450px;
+    }
+
+    .textCitation {
+        font-size: 32px;
+        line-height: 40px;
+    }
+
+    #afterbanner {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        width: 100%;
+    }
+
+    .CIAspaAdoptalien {
+        width: 60%;
+    }
+
+    .CIAspaAdoptalien h2,
+    h3 {
+        text-align: left;
+    }
+
+    .CIA {
+        margin-top: 100px;
+        margin-left: 60px;
+        margin-right: 10px;
+    }
+
+    .spa,
+    .adoptalien {
+        margin-left: 60px;
+        margin-right: 15px;
+    }
+
+    .divpostdate,
+    .lastchildactu {
+        align-items: start;
+    }
+
+    .lastchildactu p {
+        text-align: left;
+    }
+
+    .offreGeo {
+        flex-direction: column;
+    }
+
+    .imagecotegauche {
+        margin-right: 60px;
+        margin-bottom: 20px;
+        height: 200px;
+    }
+
+    .CIA button,
+    .adoptalien button,
+    .offreGeo button,
+    form .boutonOrange {
+        width: 250px;
+        font-size: 12px;
+    }
+
+    p {
+        font-size: 15px;
+        color: #777777;
+    }
+
+    .Infos {
+        margin-right: 50px;
+    }
+
+    .date p {
+        color: white;
+    }
+
+    /* footer */
+
+    .footertitle {
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+    }
+
+    .footertitle h2,
+    .footertitle h3 {
+        margin-bottom: 40px;
+        font-size: 24px;
+    }
+
+    .footertitle h3 {
+        margin-left: 10px;
+    }
+
+    .formetcontact {
+        display: flex;
+        justify-content: center;
+    }
+
+    .sectionform {
+        width: 50%;
+        margin-right: 0;
+        margin-top: 0;
+    }
+
+    .nometmail {
+        display: flex;
+        gap: 30px;
+        margin-left: 30px;
+    }
+
+    #input-message {
+        margin-left: 30px;
+        width: 79%;
+        height: 150px;
+    }
+
+    form .boutonOrange {
+        margin-left: 30px;
+    }
+
+    input {
+        width: 100%;
+        height: 40px;
+        font-size: 15px;
+    }
+
+    #centercontact{
+        display: flex;
+    }
+
+    .contactrighttablet{
+        margin-right: 20px;
+    }
+    .sectioncontact::after{
+        border:none;
+    }
+    .formetcontact::after{
+        content: "";
+        display: block;
+        border-bottom: 2px solid red;
+        margin-top: 75px;
+    }
+}
+
 
 /* ---- A partir de 992px (Desktop / Tablette paysage et plus grand) ---- */
 @media (min-width: 992px) {}
