@@ -2,6 +2,5 @@
 Tp Intégration en autonomie
 
 
-Manque Responsive tablette et Ordi
-donc nouvelle nav 
+Manque Nav ordi 
 + Javascript pour le formulaire
