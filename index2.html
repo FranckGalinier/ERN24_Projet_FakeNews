@@ -107,7 +107,7 @@
                     </div>
         
                 </div>
-                <button type="button" class="boutonOrange"> <i class="fas fa-file"></i> &ensp;J'EN VEUX ENCORE
+                <button class="boutonOrange"> <i class="fas fa-file"></i> &ensp;J'EN VEUX ENCORE
                 !</button>
 
                 <!-- ? Section de l'image avec la citation -->
@@ -248,23 +248,26 @@
                 </div>
                 <div class="formetcontact">
                     <div class="sectionform">
-                        <form action="post">
+                        <form action="#"> 
                             <div class="nometmail">
                                 <div>
                                     <label for="input-name"></label>
                                     <input type="text" name="name" id="input-name" placeholder="&emsp;Nom">
+                                    <p><span id="errorName">Les lettres anonymes c'est mal</span></p>
                                 </div>
                                 <div>
                                     <label for="input-email"></label>
                                     <input type="email" name="email" id="input-email" placeholder="&emsp;Email">
+                                    <p><span id="errorEmail">dfgfdgfdg</span></p>
                                 </div>
                             </div>
                             <div>
                                 <label for="input-message"></label>
                                 <textarea name="Message" id="input-message" cols="30" rows="10"
                                     placeholder="&emsp;Message"></textarea>
+                                    <p><span id="errorMessage">Non mais allô quoi, tu nous écris et tu nous écris rien</span></p>
                             </div>
-                            <button type="submit" id="submitForm" class="boutonOrange"> <i class="fas fa-envelope"></i>&emsp;IL VA FAIRE TOUT NOIR !</button>
+                            <button id="submitForm" class="boutonOrange"> <i class="fas fa-envelope"></i>&emsp;IL VA FAIRE TOUT NOIR !</button>
                         </form>
                     </div>
                     <div class="sectioncontact">
@@ -310,7 +313,7 @@
                     </div>
                 </div>
                 <div class="endSection">
-                    <p>&copy; Fake News. Tous droits réservés. <br><a href="#"> Mentions illégales</a></p>
+                    <p>&copy; Fake News. Tous droits réservés. <br><a class="atext" href="#"> Mentions illégales</a></p>
                 </div>
             </section>
 

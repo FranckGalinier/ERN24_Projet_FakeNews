@@ -300,17 +300,20 @@ a.atext:hover {
 
 }
 
+/* passage à la couleur orange quand on passe dessus avec la souris */
 .boutonOrange:hover {
     background-color: #FD887A;
 }
 
+/* Opacité des icones feuille et enveloppe */
 .fa-file,
 .fa-envelope {
     opacity: 0.5;
 }
 
-/*?---------Section banner--------------------------------*/
+/*?---------Section banner / citation+image --------------------------------*/
 
+/* Div qui englobe l'image et la citation */
 .citation {
     display: flex;
     justify-content: center;
@@ -344,7 +347,7 @@ a.atext:hover {
     font-weight: 700;
 }
 
-/* section cia */
+/*-------- section cia----------- */
 
 
 .CIA,
@@ -370,6 +373,9 @@ a.atext:hover {
     border-top: 2px solid #d4d3d3;
     border-bottom: 2px solid #d4d3d3;
 }
+
+/* --Partie Post avec date + actualités */
+
 
 .date {
     height: 25px;
@@ -442,8 +448,6 @@ a.atext:hover {
 }
 
 
-
-/*  */
 .imagecotegauche {
     border: #d4d3d3 solid 8px;
     height: 100px;
@@ -477,6 +481,7 @@ h3.h3vampire {
 
 /*? -----------FOOTER---------------------- */
 
+/* Titre du footer */
 
 footer {
     background-color: #F0F0F0;
@@ -491,6 +496,8 @@ footer::before {
 .footertitle {
     margin-top: 30px;
 }
+
+/*  Partie formulaire */
 
 .sectionform {
     margin-top: 30px;
@@ -516,7 +523,8 @@ textarea {
     border-radius: 4px;
     height: 30px;
     width: 100%;
-    margin-bottom: 10px;
+    margin-top:5px;
+    margin-bottom: 5px;
 }
 
 textarea {
@@ -530,11 +538,13 @@ form .boutonOrange {
     margin-bottom: 30px;
 }
 
+/* Inforamtions contact */
 .sectioncontact p {
     text-align: justify;
     font-size: 13px;
 }
 
+/* Div ronde contenant les icones dedans */
 .rondContact {
     border-radius: 50%;
     background-color: #777777;
@@ -547,6 +557,7 @@ form .boutonOrange {
     color: #E5E5E5;
 }
 
+/* Opacité des icones */
 .rondContact>i {
     opacity: 1;
 }
@@ -575,10 +586,23 @@ form .boutonOrange {
     margin-top: 20px;
 }
 
+/* Dernière section copyright et mentions illégales */
 .endSection p {
     margin-top: 50px;
     padding-bottom: 24px;
 }
+
+/* Span erreur formaulaire */
+
+#errorName, #errorEmail, #errorMessage{
+    color: #CC0000;
+    font-size: 12px;
+    display: none;
+}
+
+
+
+
 
 
 /* ----- Media queries ----- */
@@ -780,4 +804,12 @@ form .boutonOrange {
 
 
 /* ---- A partir de 992px (Desktop / Tablette paysage et plus grand) ---- */
-@media (min-width: 992px) {}
+@media (min-width: 992px) {
+    .content-panel {
+        width: 100%;
+    }
+
+
+
+
+}
